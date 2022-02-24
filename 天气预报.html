@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .st{
+            background: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Fback_pic%2F03%2F72%2F07%2F0057b8837739a36.jpg&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1648139415&t=5425bc4fe19d8704a0117eb6e143bf39);
+
+        }
+        .zong{
+            column-count:2;
+        }
+        input{
+            background-color: lightslategray;
+            border: 2px solid #8AC007;
+            height: 40px;width: 400px;
+            align-content: center;
+        }
+        #cha{
+            background-color: rgb(151, 166, 180);
+            height: 50px;width: 100%;
+        }
+        #cx{
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+            margin-bottom: 25px;
+            height: 46px;
+            background-color:rgb(7, 91, 112) ;
+            filter:alpha(Opacity=75);-moz-opacity:0.75;opacity: 0.75;
+            border-radius: 50%;
+        }
+        #btn{
+            border-radius: 15px;
+            border: 2px solid #8AC007;
+            width: 350px;
+            font-size: 20px;
+        }
+        #letf-side{
+            height: 300px;
+            width: 600px;
+            box-sizing: border-box;
+            border: 1px solid burlywood;
+            background-color: rgb(7, 91, 112);
+            box-shadow: 10px 10px 5px #888888;
+            filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8; 
+            border-radius: 1em;
+        }
+        #right_side{
+            height: 300px; width: 600px;
+            box-sizing: border-box;
+            border: 1px solid burlywood;
+            background-color: rgb(7, 91, 112);
+            box-shadow: 10px 10px 5px #888888;
+            filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8; 
+            border-radius: 1em;
+        }
+        /*#little{
+            column-count:4;
+        }*/
+        .contianer{
+            background-color:rgb(7, 91, 112);
+            filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8; 
+            border-radius: 1em;
+            height: 200px;
+        }
+        .c1{
+            background-color:rgb(7, 91, 112);
+            height: 150px;width: 150px;
+            margin: 40px;
+            display: inline-flex;
+            border-color: bisque;
+            line-height:25px;
+        }
+        #tb{
+            height: 150px;width: 250px;
+        }
+        .zn{
+            float: left;
+            text-align: center;
+            border-left: 2px;
+            border-right: 2px;
+        }
+    </style>
+</head>
+<body class="st">
+        <div id="cha">
+    <input id="btn" type="search" placeholder="输入城市名称">
+    <button id="cx">查询</button><!--按钮的边框改为0-->
+    <span style="margin-left: 500px;">日出</span><span id="sr">00:00</span>
+    <span>日落</span><span id="ss">00:00</span>
+        </div>
+        <div class="fenlie">
+            <div class="zong">
+    <div id="letf-side"><!--左上角的部分--><!--设置为半透明的形状-->
+        <div id="wendu" style="height: 50px;width:300px; font-size:xx-large;"><b>16℃</b></div>
+        <div id="tb"><img src="C:\Users\。。\Desktop\前端\iconfont-阿里巴巴矢量图标库_files\天气.png"></div>
+        <div>
+            <span id="city">广州</span>
+            <span id="citydate">2022-2-18</span>
+            <span id="time"></span>
+        </div>
+    </div>
+    <span></span>
+    <div id="right_side"><!--右上角的部分-->
+        <div id="shidu">
+            <span>湿度</span>
+            <span>00</span>
+        </div>
+        <div id="fengxiang">
+            <span>风向</span>
+            <span>00</span> 
+        </div>
+            <h3>行动指南</h3>
+            <div id="little">
+            <div class="zn"  style="height: 200px; width: 140px;">
+                <div style="height: 30px;">穿衣</div>
+                <div style="height: 100px;"><img src="C:\Users\。。\Desktop\前端\iconfont-阿里巴巴矢量图标库_files\衣服.png"></div>
+                <div id="cloth"></div>
+            </div>
+            <div class="zn" style="height: 200px; width: 140px;">
+                <div style="height: 30px;">护肤</div>
+                <div style="height: 100px;"><img src="C:\Users\。。\Desktop\前端\iconfont-阿里巴巴矢量图标库_files\护肤品 (1).png"></div>
+                <div id="skin"></div>
+            </div>
+            <div class="zn" style="height: 200px; width: 140px;">
+                <div style="height: 30px;">户外</div>
+                <div style="height: 100px;"><img src="C:\Users\。。\Desktop\前端\iconfont-阿里巴巴矢量图标库_files\运动-75.png"></div>
+                <div id="out"></div>
+            </div>
+            <div class="zn" style="height: 200px; width: 140px;">
+                <div style="height: 30px;">紫外线</div>
+                <div style="height: 100px;"><img src="C:\Users\。。\Desktop\前端\iconfont-阿里巴巴矢量图标库_files\紫外线.png"></div>
+                <div id="zwx"></div>
+            </div>
+            </div>
+    </div></div></div>
+    <div id="xiamian">
+        <h2>未来天气预报</h2>
+        <div class="contianer">
+            <div class="c1">
+                <ul>
+                    <l1 id="weather">xx日星期一</l1></br>
+                    <l1 id="gw">高温</l1></br>
+                    <l1 id="dw">低温</l1></br>
+                    <l1 id="tq">天气</l1>
+                </ul>
+            </div>
+            <div class="c1">
+                <ul>
+                    <l1 id="weather2">xx日星期二</l1></br>
+                    <l1 id="gw2">高温</l1></br>
+                    <l1 id="dw2">低温</l1></br>
+                    <l1 id="tq2">天气</l1>
+                    </ul>
+            </div>
+            <div class="c1">
+                <ul>
+                    <l1 id="weather3">xx日星期一</l1></br>
+                    <l1 id="gw3">高温</l1></br>
+                    <l1 id="dw3">低温</l1></br>
+                    <l1 id="tq3">天气</l1>
+                    </ul>
+            </div>
+            <div class="c1">
+                <ul>
+                    <l1 id="weather4">xx日星期一</l1></br>
+                    <l1 id="gw4">高温</l1></br>
+                    <l1 id="dw4">低温</l1></br>
+                    <l1 id="tq4">天气</l1>
+                    </ul>
+            </div>
+            <div class="c1">
+                <ul>
+                    <l1 id="weather5">xx日星期一</l1></br>
+                    <l1 id="gw5">高温</l1></br>
+                    <l1 id="dw5">低温</l1></br>
+                    <l1 id="tq5">天气</l1>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var btn=document.querySelector("button");
+        var txt=document.querySelector("input");
+        var date =new Date();
+    var year =date.getFullYear();
+    var month = date.getMonth() + 1;
+    var dates = date.getDate();
+    var arr =['周日','周一','周二','周三','周四','周五','周六'];
+    var day = date.getDay();
+    var citydates = document.getElementById('citydate');
+    citydates.innerHTML = year + '-' + month + '-' + dates + ' ' + arr[day];
+        txt.onkeydown=btn.onclick=function(){
+            var val=txt.value;//接下来要用Ajax链接其他内容
+            var xhr=new XMLHttpRequest();//发送Ajax请求
+            xhr.open('get','http://wthrcdn.etouch.cn/WeatherApi?city='+val) ;//用val进行一个拼接，城市
+             xhr.onreadystatechange=function(){
+                if(xhr.readyState==4&&xhr.status==200){
+                console.log(xhr.responseXML);//服务器响应成功，但是这样拿到的确实XML形式的字符串，不是我们需要的
+                var resp=xhr.responseXML.querySelector('resp');//从接口获取到的信息
+                var city=resp.querySelector('city').innerHTML;
+
+                var updatetime=resp.querySelector('updatetime').innerHTML;
+                var wendu=resp.querySelector('wendu').innerHTML;
+                var shidu=resp.querySelector('shidu').innerHTML;
+                var fengxiang=resp.querySelector('fengxiang').innerHTML;
+                var xqyi=resp.querySelector('resp > forecast > weather:nth-child(1) > date').innerHTML;
+                var gw=resp.querySelector('resp > forecast > weather:nth-child(1) > high').innerHTML;
+                var dw=resp.querySelector('resp > forecast > weather:nth-child(1) > low').innerHTML;
+                var tianqi=resp.querySelector('resp > forecast > weather:nth-child(1) > day > type').innerHTML;
+                var xqer=resp.querySelector('resp > forecast > weather:nth-child(2) > date').innerHTML;
+                var gw2=resp.querySelector('resp > forecast > weather:nth-child(2) > high').innerHTML;
+                var dw2=resp.querySelector('resp > forecast > weather:nth-child(2) > low').innerHTML;
+                var tianqi2=resp.querySelector('resp > forecast > weather:nth-child(2) > day > type').innerHTML;
+                var xqsan=resp.querySelector('resp > forecast > weather:nth-child(3) > date').innerHTML;
+                var gw3=resp.querySelector('resp > forecast > weather:nth-child(3) > high').innerHTML;
+                var dw3=resp.querySelector('resp > forecast > weather:nth-child(3) > low').innerHTML;
+                var tianqi3=resp.querySelector('resp > forecast > weather:nth-child(3) > day > type').innerHTML;
+                var xqsi=resp.querySelector('resp > forecast > weather:nth-child(4) > date').innerHTML;
+                var gw4=resp.querySelector('resp > forecast > weather:nth-child(4) > high').innerHTML;
+                var dw4=resp.querySelector('resp > forecast > weather:nth-child(4) > low').innerHTML;
+                var tianqi4=resp.querySelector('resp > forecast > weather:nth-child(4) > day > type').innerHTML;
+                var xqwu=resp.querySelector('resp > forecast > weather:nth-child(5) > date').innerHTML;
+                var gw5=resp.querySelector('resp > forecast > weather:nth-child(5) > high').innerHTML;
+                var dw5=resp.querySelector('resp > forecast > weather:nth-child(5) > low').innerHTML;
+                var tianqi5=resp.querySelector('resp > forecast > weather:nth-child(5) > day > type').innerHTML;
+                var sr=resp.querySelector('sunrise_1').innerHTML;
+                var ss=resp.querySelector('sunset_1').innerHTML;
+                var cy=resp.querySelector('resp > zhishus > zhishu:nth-child(1) > value').innerHTML;
+                var hf=resp.querySelector('resp > zhishus > zhishu:nth-child(3) > value').innerHTML;
+                var hw=resp.querySelector('resp > zhishus > zhishu:nth-child(7) > value').innerHTML;
+                var zw=resp.querySelector('resp > zhishus > zhishu:nth-child(2) > value').innerHTML;
+                document.getElementById('city').innerHTML=city;//把时间的删掉了
+                document.getElementById('time').innerHTML=updatetime+'(更新时间)';
+                document.getElementById('wendu').innerHTML=wendu+'℃';
+                document.getElementById('shidu').innerHTML='湿度：'+shidu;
+                document.getElementById('fengxiang').innerHTML='风向：'+fengxiang;
+                document.getElementById('sr').innerHTML=sr;
+                document.getElementById('ss').innerHTML=ss;
+                document.getElementById('weather').innerHTML=xqyi;
+                document.getElementById('weather2').innerHTML=xqer;
+                document.getElementById('weather3').innerHTML=xqsan;
+                document.getElementById('weather4').innerHTML=xqsi;
+                document.getElementById('weather5').innerHTML=xqwu;
+                document.getElementById('cloth').innerHTML=cy;
+                document.getElementById('skin').innerHTML=hf;
+                document.getElementById('out').innerHTML=hw;
+                document.getElementById('zwx').innerHTML=zw;
+                document.getElementById('gw').innerHTML=gw;
+                document.getElementById('dw').innerHTML=dw;
+                document.getElementById('tq').innerHTML=tianqi;
+                document.getElementById('gw2').innerHTML=gw2;
+                document.getElementById('dw2').innerHTML=dw2;
+                document.getElementById('tq2').innerHTML=tianqi2;
+                document.getElementById('gw3').innerHTML=gw3;
+                document.getElementById('dw3').innerHTML=dw3;
+                document.getElementById('tq3').innerHTML=tianqi3;
+                document.getElementById('gw4').innerHTML=gw4;
+                document.getElementById('dw4').innerHTML=dw4;
+                document.getElementById('tq4').innerHTML=tianqi4;
+                document.getElementById('gw5').innerHTML=gw5;
+                document.getElementById('dw5').innerHTML=dw5;
+                document.getElementById('tq5').innerHTML=tianqi5;
+            }
+        }
+            xhr.send()
+
+        }
+
+    </script>
+    
+</body>
+</html>
